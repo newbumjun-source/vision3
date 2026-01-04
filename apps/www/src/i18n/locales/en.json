@@ -1,243 +1,182 @@
 {
   "common": {
-    "getStarted": "Get Started",
+    "getStarted": "Get started",
     "signIn": "Sign in",
     "community": "Community"
   },
   "header": {
-    "home": "Home",
     "features": "Features",
     "pricing": "Pricing",
     "faq": "FAQ",
     "menuOpen": "Open menu"
   },
   "hero": {
-    "badge": "Template",
-    "title": "Describe\nYour Service",
-    "description": "Write a concise value proposition.\nOne or two lines is enough.",
-    "imageAlt": "Product preview",
-    "tutorial": "Watch Tutorial"
+    "badge": "AI-powered creative tool",
+    "title": "Thumbnails that\ndemand attention.",
+    "description": "Transform your ideas into scroll-stopping YouTube thumbnails through natural conversation. No design skills required.",
+    "cta": "Start creating",
+    "ctaNote": "Free to try · No credit card required"
   },
-  "solution": {
-    "sectionTitle": "Solution",
-    "title": "Explain Your\nKey Benefits",
-    "description": "Use 1–2 sentences to describe how your product solves the problem.",
-    "features": {
-      "prd": {
-        "title": "Feature One",
-        "description": "Short description for feature one."
+  "philosophy": {
+    "statement": "We believe great content\ndeserves great presentation.\nDesign should never be the barrier.",
+    "pillars": {
+      "craft": {
+        "title": "Craft without friction",
+        "description": "Skip the learning curve. Just describe what you want—our AI understands context, tone, and visual language."
       },
-      "plan": {
-        "title": "Feature Two",
-        "description": "Short description for feature two."
+      "simplicity": {
+        "title": "Radical simplicity",
+        "description": "One conversation. Multiple options. No templates to browse, no tools to learn. Focus on your message."
       },
-      "mcp": {
-        "title": "Feature Three",
-        "description": "Short description for feature three."
+      "impact": {
+        "title": "Built for impact",
+        "description": "Every thumbnail is optimized for clicks. High contrast, clear hierarchy, proven composition patterns."
       }
     }
   },
-  "targetUsers": {
-    "sectionTitle": "Who It's For",
-    "title": "Your Ideal Audience",
-    "description": "Briefly describe who will get the most value from your product.",
-    "users": {
-      "solo": {
-        "label": "Persona B",
-        "title": "Persona B",
-        "description": "Short description for this persona.",
-        "persona1": "Key trait 1",
-        "persona2": "Key trait 2",
-        "persona3": "Key trait 3"
+  "features": {
+    "label": "How it works",
+    "title": "The creative process, reimagined.",
+    "description": "From concept to completion in minutes, not hours. Our AI handles the visual complexity so you can focus on what matters—your content.",
+    "items": {
+      "conversation": {
+        "title": "Natural conversation",
+        "description": "Describe your video topic, mood, and style in plain language. Our AI interprets your vision and generates multiple concepts instantly."
       },
-      "startup": {
-        "label": "Persona C",
-        "title": "Persona C",
-        "description": "Short description for this persona.",
-        "persona1": "Key trait 1",
-        "persona2": "Key trait 2",
-        "persona3": "Key trait 3"
+      "generation": {
+        "title": "Intelligent generation",
+        "description": "Powered by advanced AI that understands YouTube aesthetics, viewer psychology, and what makes thumbnails click-worthy."
       },
-      "vibecoder": {
-        "label": "Persona A",
-        "title": "Persona A",
-        "description": "Short description for this persona.",
-        "persona1": "Key trait 1",
-        "persona2": "Key trait 2",
-        "persona3": "Key trait 3"
+      "speed": {
+        "title": "Three-minute turnaround",
+        "description": "From idea to export-ready thumbnail in under three minutes. Iterate as much as you need—we'll keep up."
+      },
+      "integration": {
+        "title": "Seamless integration",
+        "description": "Directly upload to YouTube or download in various formats. Optimized for all devices and platforms."
+      },
+      "brand": {
+        "title": "Brand consistency",
+        "description": "Define your brand guidelines once, and our AI will ensure every thumbnail aligns with your visual identity."
+      },
+      "analytics": {
+        "title": "Performance insights",
+        "description": "Track thumbnail performance with built-in analytics to understand what resonates with your audience."
       }
     }
   },
-  "roadmap": {
-    "sectionTitle": "Roadmap",
-    "title": "What's Next",
-    "description": "Outline your upcoming milestones and priorities.",
-
-    "features": {
-      "contextIntegration": {
-        "name": "Upcoming Feature A",
-        "description": "Short description for this upcoming feature.",
-        "cta": "Get Notified"
-      },
-      "teamCollaboration": {
-        "name": "Upcoming Feature B",
-        "description": "Short description for this upcoming feature.",
-        "cta": "Get Notified"
-      },
-      "milestoneRoadmap": {
-        "name": "Upcoming Feature C",
-        "description": "Short description for this upcoming feature.",
-        "cta": "Get Notified"
-      },
-      "insights": {
-        "name": "Upcoming Feature D",
-        "description": "Short description for this upcoming feature.",
-        "cta": "Get Notified"
-      },
-      "whatsNext": {
-        "name": "Share Feedback",
-        "description": "Invite users to share feedback in your community.",
-        "cta": "Provide Feedback"
-      }
-    },
-    "community": {
-      "title": "Join the Community",
-      "description": "Invite your audience to participate and stay updated.\nKeep it short and friendly.",
-      "hashtags": "#hashtag1 #hashtag2",
-      "cta": "Community"
-    }
+  "visualBreak": {
+    "phrase1": "CREATE",
+    "phrase2": "CAPTIVATE",
+    "tagline": "Stop designing. Start creating."
   },
   "pricing": {
-    "title": "Simple, Transparent Plans",
-    "description": "Describe your pricing in one sentence.",
-    "yearlyDiscountLabel": "Save 35%",
-    "frequencies": {
-      "monthly": "Monthly",
-      "yearly": "Yearly"
-    },
+    "label": "Pricing",
+    "title": "Simple, transparent pricing.",
+    "description": "Start free. Upgrade when you're ready.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "yearlyDiscount": "Save 20%",
+    "popular": "Most popular",
+    "perMonth": "mo",
     "plans": {
-      "free": {
-        "title": "Free",
-        "unit": "/month",
-        "description": "Great for getting started",
-        "credits": "100 credits/month",
-        "projects": "Up to 3 projects",
-        "ai": "Basic features",
-        "support": "Community support",
-        "buttonText": "Get Started Free"
+      "starter": {
+        "name": "Starter",
+        "description": "Perfect for trying things out",
+        "features": [
+          "10 thumbnails per month",
+          "Basic export quality",
+          "Community support",
+          "Standard generation speed"
+        ],
+        "cta": "Get started free"
       },
       "pro": {
-        "title": "Pro",
-        "unit": "/month",
-        "description": "For growing developers or teams",
-        "credits": "500 credits/month",
-        "projects": "Unlimited projects",
-        "ai": "Advanced features",
-        "designer": "Additional tools",
-        "buttonText": "Choose Pro"
+        "name": "Pro",
+        "description": "For serious creators",
+        "features": [
+          "50 thumbnails per month",
+          "HD & 4K export",
+          "Priority support",
+          "Advanced editing tools"
+        ],
+        "cta": "Start with Pro"
       },
-      "max5": {
-        "title": "Business",
-        "unit": "/month",
-        "description": "For professional usage",
-        "credits": "2,000 credits/month",
-        "usage": "Enhanced usage",
-        "ai": "Premium features",
-        "image": "Image attachment",
-        "buttonText": "Choose Business"
-      },
-      "max20": {
-        "title": "Enterprise+",
-        "unit": "/month",
-        "description": "For high-usage needs",
-        "credits": "10,000 credits/month",
-        "usage": "Premium usage",
-        "ai": "Top features",
-        "context": "Largest limit",
-        "buttonText": "Choose Enterprise+"
+      "business": {
+        "name": "Business",
+        "description": "For teams and agencies",
+        "features": [
+          "Unlimited thumbnails",
+          "All export formats",
+          "Dedicated support",
+          "API access"
+        ],
+        "cta": "Contact sales"
       }
-    },
-    "beta": {
-      "price": "Free"
     }
   },
   "faq": {
-    "title": "Frequently Asked Questions",
-    "description": "Replace with a short introduction to your FAQ.",
-    "item1": {
-      "question": "Write your question here",
-      "answer": "Write a concise answer here."
-    },
-    "item2": {
-      "question": "Write your question here",
-      "answer": "Write a concise answer here."
-    },
-    "item3": {
-      "question": "Write your question here",
-      "answer": "Write a concise answer here."
-    },
-    "item4": {
-      "question": "Write your question here",
-      "answer": "Write a concise answer here."
-    },
-    "item5": {
-      "question": "Write your question here",
-      "answer": "Write a concise answer here."
-    },
-    "item6": {
-      "question": "Write your question here",
-      "answer": "Write a concise answer here."
+    "label": "Questions",
+    "title": "Common questions.",
+    "description": "Everything you need to know about Vision3 and how it works.",
+    "items": {
+      "generate": {
+        "question": "How does the AI generate thumbnails?",
+        "answer": "Our AI uses advanced machine learning models trained on millions of high-performing YouTube thumbnails. You provide a text prompt, and it generates visually compelling options optimized for click-through rates."
+      },
+      "experience": {
+        "question": "Do I need any design experience?",
+        "answer": "Absolutely not! Vision3 is designed for creators of all skill levels. Our conversational interface means you just describe your vision, and the AI handles the design complexities."
+      },
+      "edit": {
+        "question": "Can I edit the generated thumbnails?",
+        "answer": "Yes, you can make adjustments to colors, fonts, layouts, and add custom elements within our intuitive editor. The AI provides a strong starting point, and you have full creative control."
+      },
+      "export": {
+        "question": "What export formats are available?",
+        "answer": "You can export your thumbnails in various resolutions (HD, 4K) and formats (JPG, PNG) suitable for direct upload to YouTube and other social media platforms."
+      },
+      "trial": {
+        "question": "Is there a free trial?",
+        "answer": "Yes, Vision3 offers a generous free tier that allows you to generate a limited number of thumbnails each month without needing a credit card. It's perfect for getting started!"
+      },
+      "brand": {
+        "question": "How does Vision3 ensure brand consistency?",
+        "answer": "Our platform allows you to upload brand assets and define style guidelines. The AI then incorporates these elements into every generated thumbnail, ensuring a consistent look and feel across your content."
+      }
     }
   },
+  "cta": {
+    "title": "Ready to transform your thumbnails?",
+    "description": "Join thousands of creators who've upgraded their visual game. Start creating thumbnails that actually get clicked.",
+    "cta": "Start creating free",
+    "ctaNote": "No credit card required"
+  },
   "footer": {
-    "tagline": "All in One Vibe Coding PM",
+    "tagline": "AI-powered thumbnail creation for modern creators.",
     "product": {
       "title": "Product",
       "features": "Features",
       "pricing": "Pricing",
-      "roadmap": "Roadmap"
-    },
-    "company": {
-      "contact": "Contact"
+      "faq": "FAQ"
     },
     "resources": {
       "title": "Resources",
       "community": "Community",
-      "support": "Support",
-      "feedback": "Feedback"
-    },
-    "social": {
-      "title": "Social",
-      "threads": "threads",
-      "instagram": "instagram"
+      "support": "Support"
     },
     "legal": {
+      "title": "Legal",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
     },
-    "copyright": "© 2025 ProductName. All rights reserved."
-  },
-  "finalCTA": {
-    "title": "Ready to Get Started?",
-    "description": "Add a short, encouraging closing statement.",
-    "cta": "Get Started",
-    "benefits": {
-      "freeAccess": {
-        "title": "Benefit A",
-        "description": "Short description of this benefit."
-      },
-      "limitedSpots": {
-        "title": "Benefit B",
-        "description": "Short description of this benefit."
-      },
-      "earlyAdopter": {
-        "title": "Benefit C",
-        "description": "Short description of this benefit."
-      }
-    }
+    "social": {
+      "title": "Social"
+    },
+    "copyright": "© 2026 Vision3. All rights reserved."
   },
   "metadata": {
-    "title": "ProductName | AI Product Manager",
-    "description": "AI PM for systematic vibe coding"
+    "title": "Vision3 | AI Thumbnail Generator",
+    "description": "Generate high-CTR YouTube thumbnails with AI. No design skills needed."
   }
 }

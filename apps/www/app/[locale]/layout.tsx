@@ -5,13 +5,7 @@ import { routing } from "@/i18n/routing";
 import { ClientProviders } from "../client-providers";
 import { Toaster } from "@myapp/ui/components/sonner";
 import "@myapp/ui/globals.css";
-import localFont from "next/font/local";
-
-const pretendard = localFont({
-  src: "../fonts/PretendardVariable.ttf",
-  weight: "45 920",
-  variable: "--font-pretendard",
-});
+import "../globals.css";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -47,8 +41,14 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body className={`antialiased ${pretendard.variable} font-pretendard`}>
+    <html lang={locale} className="light">
+      <body
+        className="antialiased"
+        style={{
+          backgroundColor: "#fafaf9",
+          color: "#0c0a09",
+        }}
+      >
         <NextIntlClientProvider messages={messages} locale={locale}>
           <ClientProviders>
             {children}

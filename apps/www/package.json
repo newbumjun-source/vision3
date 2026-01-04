@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^12.9.0",
-    "@next/third-parties": "^15.3.8",
     "@myapp/ui": "workspace:*",
+    "@next/third-parties": "^15.3.8",
     "clsx": "^2.1.1",
     "framer-motion": "^12.15.0",
     "lucide-react": "^0.515.0",
@@ -25,12 +25,13 @@
     "react-day-picker": "^9.7.0",
     "react-dom": "^19.1.0",
     "react-markdown": "^10.1.0",
+    "react-use-measure": "^2.1.7",
     "recharts": "^2.15.3"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^15.3.8",
     "@myapp/eslint-config": "workspace:*",
     "@myapp/typescript-config": "workspace:*",
+    "@next/eslint-plugin-next": "^15.3.8",
     "@types/node": "^22.15.3",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.1",

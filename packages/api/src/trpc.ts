@@ -12,8 +12,9 @@ import type { CreateNextContextOptions } from "@trpc/server/adapters/next";
 import type { FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch";
 import superjson from "superjson";
 import { ZodError } from "zod";
-import { auth } from "@clerk/nextjs/server";
+import { auth, clerkClient } from "@clerk/nextjs/server";
 import { prisma } from "@myapp/prisma";
+import { cuid2 } from "@myapp/utils";
 
 type AuthResult = Awaited<ReturnType<typeof auth>>;
 
@@ -103,16 +104,32 @@ const isAuthed = t.middleware(async ({ ctx, next }) => {
     });
   }
 
-  const user = await prisma.user.findUnique({
+  let user = await prisma.user.findUnique({
     where: {
       clerkId: ctx.auth.userId,
     },
   });
 
+  // Just-in-Time User Provisioning: Clerk에서 인증된 사용자가 DB에 없으면 자동 생성
   if (!user) {
-    throw new TRPCError({
-      code: "UNAUTHORIZED",
-      message: "User not found",
+    const client = await clerkClient();
+    const clerkUser = await client.users.getUser(ctx.auth.userId);
+
+    const email = clerkUser.emailAddresses[0]?.emailAddress;
+    if (!email) {
+      throw new TRPCError({
+        code: "BAD_REQUEST",
+        message: "User email not found in Clerk",
+      });
+    }
+
+    user = await prisma.user.create({
+      data: {
+        id: `usr_${cuid2()}`,
+        clerkId: ctx.auth.userId,
+        email,
+        username: clerkUser.username ?? null,
+      },
     });
   }
 

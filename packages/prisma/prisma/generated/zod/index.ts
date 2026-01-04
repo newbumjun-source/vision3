@@ -240,7 +240,7 @@ export type PaymentHistory = z.infer<typeof PaymentHistorySchema>
 
 export const UserIncludeSchema: z.ZodType<Prisma.UserInclude> = z.object({
   subscription: z.union([z.boolean(),z.lazy(() => SubscriptionArgsSchema)]).optional(),
-  paymentHistories: z.union([z.boolean(),z.lazy(() => PaymentHistoryFindManyArgsSchema)]).optional(),
+  paymentHistory: z.union([z.boolean(),z.lazy(() => PaymentHistoryFindManyArgsSchema)]).optional(),
   _count: z.union([z.boolean(),z.lazy(() => UserCountOutputTypeArgsSchema)]).optional(),
 }).strict()
 
@@ -254,7 +254,7 @@ export const UserCountOutputTypeArgsSchema: z.ZodType<Prisma.UserCountOutputType
 }).strict();
 
 export const UserCountOutputTypeSelectSchema: z.ZodType<Prisma.UserCountOutputTypeSelect> = z.object({
-  paymentHistories: z.boolean().optional(),
+  paymentHistory: z.boolean().optional(),
 }).strict();
 
 export const UserSelectSchema: z.ZodType<Prisma.UserSelect> = z.object({
@@ -265,7 +265,7 @@ export const UserSelectSchema: z.ZodType<Prisma.UserSelect> = z.object({
   createdAt: z.boolean().optional(),
   updatedAt: z.boolean().optional(),
   subscription: z.union([z.boolean(),z.lazy(() => SubscriptionArgsSchema)]).optional(),
-  paymentHistories: z.union([z.boolean(),z.lazy(() => PaymentHistoryFindManyArgsSchema)]).optional(),
+  paymentHistory: z.union([z.boolean(),z.lazy(() => PaymentHistoryFindManyArgsSchema)]).optional(),
   _count: z.union([z.boolean(),z.lazy(() => UserCountOutputTypeArgsSchema)]).optional(),
 }).strict()
 
@@ -415,7 +415,7 @@ export const UserWhereInputSchema: z.ZodType<Prisma.UserWhereInput> = z.object({
   createdAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
   updatedAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
   subscription: z.union([ z.lazy(() => SubscriptionNullableScalarRelationFilterSchema),z.lazy(() => SubscriptionWhereInputSchema) ]).optional().nullable(),
-  paymentHistories: z.lazy(() => PaymentHistoryListRelationFilterSchema).optional()
+  paymentHistory: z.lazy(() => PaymentHistoryListRelationFilterSchema).optional()
 }).strict();
 
 export const UserOrderByWithRelationInputSchema: z.ZodType<Prisma.UserOrderByWithRelationInput> = z.object({
@@ -426,7 +426,7 @@ export const UserOrderByWithRelationInputSchema: z.ZodType<Prisma.UserOrderByWit
   createdAt: z.lazy(() => SortOrderSchema).optional(),
   updatedAt: z.lazy(() => SortOrderSchema).optional(),
   subscription: z.lazy(() => SubscriptionOrderByWithRelationInputSchema).optional(),
-  paymentHistories: z.lazy(() => PaymentHistoryOrderByRelationAggregateInputSchema).optional()
+  paymentHistory: z.lazy(() => PaymentHistoryOrderByRelationAggregateInputSchema).optional()
 }).strict();
 
 export const UserWhereUniqueInputSchema: z.ZodType<Prisma.UserWhereUniqueInput> = z.union([
@@ -468,7 +468,7 @@ export const UserWhereUniqueInputSchema: z.ZodType<Prisma.UserWhereUniqueInput> 
   createdAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
   updatedAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
   subscription: z.union([ z.lazy(() => SubscriptionNullableScalarRelationFilterSchema),z.lazy(() => SubscriptionWhereInputSchema) ]).optional().nullable(),
-  paymentHistories: z.lazy(() => PaymentHistoryListRelationFilterSchema).optional()
+  paymentHistory: z.lazy(() => PaymentHistoryListRelationFilterSchema).optional()
 }).strict());
 
 export const UserOrderByWithAggregationInputSchema: z.ZodType<Prisma.UserOrderByWithAggregationInput> = z.object({
@@ -1038,7 +1038,7 @@ export const UserCreateInputSchema: z.ZodType<Prisma.UserCreateInput> = z.object
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   subscription: z.lazy(() => SubscriptionCreateNestedOneWithoutUserInputSchema).optional(),
-  paymentHistories: z.lazy(() => PaymentHistoryCreateNestedManyWithoutUserInputSchema).optional()
+  paymentHistory: z.lazy(() => PaymentHistoryCreateNestedManyWithoutUserInputSchema).optional()
 }).strict();
 
 export const UserUncheckedCreateInputSchema: z.ZodType<Prisma.UserUncheckedCreateInput> = z.object({
@@ -1049,7 +1049,7 @@ export const UserUncheckedCreateInputSchema: z.ZodType<Prisma.UserUncheckedCreat
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
   subscription: z.lazy(() => SubscriptionUncheckedCreateNestedOneWithoutUserInputSchema).optional(),
-  paymentHistories: z.lazy(() => PaymentHistoryUncheckedCreateNestedManyWithoutUserInputSchema).optional()
+  paymentHistory: z.lazy(() => PaymentHistoryUncheckedCreateNestedManyWithoutUserInputSchema).optional()
 }).strict();
 
 export const UserUpdateInputSchema: z.ZodType<Prisma.UserUpdateInput> = z.object({
@@ -1060,7 +1060,7 @@ export const UserUpdateInputSchema: z.ZodType<Prisma.UserUpdateInput> = z.object
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   subscription: z.lazy(() => SubscriptionUpdateOneWithoutUserNestedInputSchema).optional(),
-  paymentHistories: z.lazy(() => PaymentHistoryUpdateManyWithoutUserNestedInputSchema).optional()
+  paymentHistory: z.lazy(() => PaymentHistoryUpdateManyWithoutUserNestedInputSchema).optional()
 }).strict();
 
 export const UserUncheckedUpdateInputSchema: z.ZodType<Prisma.UserUncheckedUpdateInput> = z.object({
@@ -1071,7 +1071,7 @@ export const UserUncheckedUpdateInputSchema: z.ZodType<Prisma.UserUncheckedUpdat
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   subscription: z.lazy(() => SubscriptionUncheckedUpdateOneWithoutUserNestedInputSchema).optional(),
-  paymentHistories: z.lazy(() => PaymentHistoryUncheckedUpdateManyWithoutUserNestedInputSchema).optional()
+  paymentHistory: z.lazy(() => PaymentHistoryUncheckedUpdateManyWithoutUserNestedInputSchema).optional()
 }).strict();
 
 export const UserCreateManyInputSchema: z.ZodType<Prisma.UserCreateManyInput> = z.object({
@@ -1440,7 +1440,7 @@ export const PaymentHistoryCreateInputSchema: z.ZodType<Prisma.PaymentHistoryCre
   refundedAt: z.coerce.date().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  user: z.lazy(() => UserCreateNestedOneWithoutPaymentHistoriesInputSchema)
+  user: z.lazy(() => UserCreateNestedOneWithoutPaymentHistoryInputSchema)
 }).strict();
 
 export const PaymentHistoryUncheckedCreateInputSchema: z.ZodType<Prisma.PaymentHistoryUncheckedCreateInput> = z.object({
@@ -1504,7 +1504,7 @@ export const PaymentHistoryUpdateInputSchema: z.ZodType<Prisma.PaymentHistoryUpd
   refundedAt: z.union([ z.coerce.date(),z.lazy(() => NullableDateTimeFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  user: z.lazy(() => UserUpdateOneRequiredWithoutPaymentHistoriesNestedInputSchema).optional()
+  user: z.lazy(() => UserUpdateOneRequiredWithoutPaymentHistoryNestedInputSchema).optional()
 }).strict();
 
 export const PaymentHistoryUncheckedUpdateInputSchema: z.ZodType<Prisma.PaymentHistoryUncheckedUpdateInput> = z.object({
@@ -2447,9 +2447,9 @@ export const SubscriptionUncheckedUpdateManyWithoutPlanNestedInputSchema: z.ZodT
   deleteMany: z.union([ z.lazy(() => SubscriptionScalarWhereInputSchema),z.lazy(() => SubscriptionScalarWhereInputSchema).array() ]).optional(),
 }).strict();
 
-export const UserCreateNestedOneWithoutPaymentHistoriesInputSchema: z.ZodType<Prisma.UserCreateNestedOneWithoutPaymentHistoriesInput> = z.object({
-  create: z.union([ z.lazy(() => UserCreateWithoutPaymentHistoriesInputSchema),z.lazy(() => UserUncheckedCreateWithoutPaymentHistoriesInputSchema) ]).optional(),
-  connectOrCreate: z.lazy(() => UserCreateOrConnectWithoutPaymentHistoriesInputSchema).optional(),
+export const UserCreateNestedOneWithoutPaymentHistoryInputSchema: z.ZodType<Prisma.UserCreateNestedOneWithoutPaymentHistoryInput> = z.object({
+  create: z.union([ z.lazy(() => UserCreateWithoutPaymentHistoryInputSchema),z.lazy(() => UserUncheckedCreateWithoutPaymentHistoryInputSchema) ]).optional(),
+  connectOrCreate: z.lazy(() => UserCreateOrConnectWithoutPaymentHistoryInputSchema).optional(),
   connect: z.lazy(() => UserWhereUniqueInputSchema).optional()
 }).strict();
 
@@ -2465,12 +2465,12 @@ export const IntFieldUpdateOperationsInputSchema: z.ZodType<Prisma.IntFieldUpdat
   divide: z.number().optional()
 }).strict();
 
-export const UserUpdateOneRequiredWithoutPaymentHistoriesNestedInputSchema: z.ZodType<Prisma.UserUpdateOneRequiredWithoutPaymentHistoriesNestedInput> = z.object({
-  create: z.union([ z.lazy(() => UserCreateWithoutPaymentHistoriesInputSchema),z.lazy(() => UserUncheckedCreateWithoutPaymentHistoriesInputSchema) ]).optional(),
-  connectOrCreate: z.lazy(() => UserCreateOrConnectWithoutPaymentHistoriesInputSchema).optional(),
-  upsert: z.lazy(() => UserUpsertWithoutPaymentHistoriesInputSchema).optional(),
+export const UserUpdateOneRequiredWithoutPaymentHistoryNestedInputSchema: z.ZodType<Prisma.UserUpdateOneRequiredWithoutPaymentHistoryNestedInput> = z.object({
+  create: z.union([ z.lazy(() => UserCreateWithoutPaymentHistoryInputSchema),z.lazy(() => UserUncheckedCreateWithoutPaymentHistoryInputSchema) ]).optional(),
+  connectOrCreate: z.lazy(() => UserCreateOrConnectWithoutPaymentHistoryInputSchema).optional(),
+  upsert: z.lazy(() => UserUpsertWithoutPaymentHistoryInputSchema).optional(),
   connect: z.lazy(() => UserWhereUniqueInputSchema).optional(),
-  update: z.union([ z.lazy(() => UserUpdateToOneWithWhereWithoutPaymentHistoriesInputSchema),z.lazy(() => UserUpdateWithoutPaymentHistoriesInputSchema),z.lazy(() => UserUncheckedUpdateWithoutPaymentHistoriesInputSchema) ]).optional(),
+  update: z.union([ z.lazy(() => UserUpdateToOneWithWhereWithoutPaymentHistoryInputSchema),z.lazy(() => UserUpdateWithoutPaymentHistoryInputSchema),z.lazy(() => UserUncheckedUpdateWithoutPaymentHistoryInputSchema) ]).optional(),
 }).strict();
 
 export const NestedStringFilterSchema: z.ZodType<Prisma.NestedStringFilter> = z.object({
@@ -2981,7 +2981,7 @@ export const UserCreateWithoutSubscriptionInputSchema: z.ZodType<Prisma.UserCrea
   username: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  paymentHistories: z.lazy(() => PaymentHistoryCreateNestedManyWithoutUserInputSchema).optional()
+  paymentHistory: z.lazy(() => PaymentHistoryCreateNestedManyWithoutUserInputSchema).optional()
 }).strict();
 
 export const UserUncheckedCreateWithoutSubscriptionInputSchema: z.ZodType<Prisma.UserUncheckedCreateWithoutSubscriptionInput> = z.object({
@@ -2991,7 +2991,7 @@ export const UserUncheckedCreateWithoutSubscriptionInputSchema: z.ZodType<Prisma
   username: z.string().optional().nullable(),
   createdAt: z.coerce.date().optional(),
   updatedAt: z.coerce.date().optional(),
-  paymentHistories: z.lazy(() => PaymentHistoryUncheckedCreateNestedManyWithoutUserInputSchema).optional()
+  paymentHistory: z.lazy(() => PaymentHistoryUncheckedCreateNestedManyWithoutUserInputSchema).optional()
 }).strict();
 
 export const UserCreateOrConnectWithoutSubscriptionInputSchema: z.ZodType<Prisma.UserCreateOrConnectWithoutSubscriptionInput> = z.object({
@@ -3050,7 +3050,7 @@ export const UserUpdateWithoutSubscriptionInputSchema: z.ZodType<Prisma.UserUpda
   username: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  paymentHistories: z.lazy(() => PaymentHistoryUpdateManyWithoutUserNestedInputSchema).optional()
+  paymentHistory: z.lazy(() => PaymentHistoryUpdateManyWithoutUserNestedInputSchema).optional()
 }).strict();
 
 export const UserUncheckedUpdateWithoutSubscriptionInputSchema: z.ZodType<Prisma.UserUncheckedUpdateWithoutSubscriptionInput> = z.object({
@@ -3060,7 +3060,7 @@ export const UserUncheckedUpdateWithoutSubscriptionInputSchema: z.ZodType<Prisma
   username: z.union([ z.string(),z.lazy(() => NullableStringFieldUpdateOperationsInputSchema) ]).optional().nullable(),
   createdAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
   updatedAt: z.union([ z.coerce.date(),z.lazy(() => DateTimeFieldUpdateOperationsInputSchema) ]).optional(),
-  paymentHistories: z.lazy(() => PaymentHistoryUncheckedUpdateManyWithoutUserNestedInputSchema).optional()
+  paymentHistory: z.lazy(() => PaymentHistoryUncheckedUpdateManyWithoutUserNestedInputSchema).optional()
 }).strict();
 
 export const PlanUpsertWithoutSubscriptionsInputSchema: z.ZodType<Prisma.PlanUpsertWithoutSubscriptionsInput> = z.object({
@@ -3189,7 +3189,7 @@ export const SubscriptionScalarWhereInputSchema: z.ZodType<Prisma.SubscriptionSc
   updatedAt: z.union([ z.lazy(() => DateTimeFilterSchema),z.coerce.date() ]).optional(),
 }).strict();
 
-export const UserCreateWithoutPaymentHistoriesInputSchema: z.ZodType<Prisma.UserCreateWithoutPaymentHistoriesInput> = z.object({
+export const UserCreateWithoutPaymentHistoryInputSchema: z.ZodType<Prisma.UserCreateWithoutPaymentHistoryInput> = z.object({
   id: z.string(),
   clerkId: z.string(),
   email: z.string(),
@@ -3199,7 +3199,7 @@ export const UserCreateWithoutPaymentHistoriesInputSchema: z.ZodType<Prisma.User
   subscription: z.lazy(() => SubscriptionCreateNestedOneWithoutUserInputSchema).optional()
 }).strict();
 
-export const UserUncheckedCreateWithoutPaymentHistoriesInputSchema: z.ZodType<Prisma.UserUncheckedCreateWithoutPaymentHistoriesInput> = z.object({
+export const UserUncheckedCreateWithoutPaymentHistoryInputSchema: z.ZodType<Prisma.UserUncheckedCreateWithoutPaymentHistoryInput> = z.object({
   id: z.string(),
   clerkId: z.string(),
   email: z.string(),
@@ -3209,23 +3209,23 @@ export const UserUncheckedCreateWithoutPaymentHistoriesInputSchema: z.ZodType<Pr
   subscription: z.lazy(() => SubscriptionUncheckedCreateNestedOneWithoutUserInputSchema).optional()
 }).strict();
 
-export const UserCreateOrConnectWithoutPaymentHistoriesInputSchema: z.ZodType<Prisma.UserCreateOrConnectWithoutPaymentHistoriesInput> = z.object({
+export const UserCreateOrConnectWithoutPaymentHistoryInputSchema: z.ZodType<Prisma.UserCreateOrConnectWithoutPaymentHistoryInput> = z.object({
   where: z.lazy(() => UserWhereUniqueInputSchema),
-  create: z.union([ z.lazy(() => UserCreateWithoutPaymentHistoriesInputSchema),z.lazy(() => UserUncheckedCreateWithoutPaymentHistoriesInputSchema) ]),
+  create: z.union([ z.lazy(() => UserCreateWithoutPaymentHistoryInputSchema),z.lazy(() => UserUncheckedCreateWithoutPaymentHistoryInputSchema) ]),
 }).strict();
 
-export const UserUpsertWithoutPaymentHistoriesInputSchema: z.ZodType<Prisma.UserUpsertWithoutPaymentHistoriesInput> = z.object({
-  update: z.union([ z.lazy(() => UserUpdateWithoutPaymentHistoriesInputSchema),z.lazy(() => UserUncheckedUpdateWithoutPaymentHistoriesInputSchema) ]),
-  create: z.union([ z.lazy(() => UserCreateWithoutPaymentHistoriesInputSchema),z.lazy(() => UserUncheckedCreateWithoutPaymentHistoriesInputSchema) ]),
+export const UserUpsertWithoutPaymentHistoryInputSchema: z.ZodType<Prisma.UserUpsertWithoutPaymentHistoryInput> = z.object({
+  update: z.union([ z.lazy(() => UserUpdateWithoutPaymentHistoryInputSchema),z.lazy(() => UserUncheckedUpdateWithoutPaymentHistoryInputSchema) ]),
+  create: z.union([ z.lazy(() => UserCreateWithoutPaymentHistoryInputSchema),z.lazy(() => UserUncheckedCreateWithoutPaymentHistoryInputSchema) ]),
   where: z.lazy(() => UserWhereInputSchema).optional()
 }).strict();
 
-export const UserUpdateToOneWithWhereWithoutPaymentHistoriesInputSchema: z.ZodType<Prisma.UserUpdateToOneWithWhereWithoutPaymentHistoriesInput> = z.object({
+export const UserUpdateToOneWithWhereWithoutPaymentHistoryInputSchema: z.ZodType<Prisma.UserUpdateToOneWithWhereWithoutPaymentHistoryInput> = z.object({
   where: z.lazy(() => UserWhereInputSchema).optional(),
-  data: z.union([ z.lazy(() => UserUpdateWithoutPaymentHistoriesInputSchema),z.lazy(() => UserUncheckedUpdateWithoutPaymentHistoriesInputSchema) ]),
+  data: z.union([ z.lazy(() => UserUpdateWithoutPaymentHistoryInputSchema),z.lazy(() => UserUncheckedUpdateWithoutPaymentHistoryInputSchema) ]),
 }).strict();
 
-export const UserUpdateWithoutPaymentHistoriesInputSchema: z.ZodType<Prisma.UserUpdateWithoutPaymentHistoriesInput> = z.object({
+export const UserUpdateWithoutPaymentHistoryInputSchema: z.ZodType<Prisma.UserUpdateWithoutPaymentHistoryInput> = z.object({
   id: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   clerkId: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   email: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
@@ -3235,7 +3235,7 @@ export const UserUpdateWithoutPaymentHistoriesInputSchema: z.ZodType<Prisma.User
   subscription: z.lazy(() => SubscriptionUpdateOneWithoutUserNestedInputSchema).optional()
 }).strict();
 
-export const UserUncheckedUpdateWithoutPaymentHistoriesInputSchema: z.ZodType<Prisma.UserUncheckedUpdateWithoutPaymentHistoriesInput> = z.object({
+export const UserUncheckedUpdateWithoutPaymentHistoryInputSchema: z.ZodType<Prisma.UserUncheckedUpdateWithoutPaymentHistoryInput> = z.object({
   id: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   clerkId: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),
   email: z.union([ z.string(),z.lazy(() => StringFieldUpdateOperationsInputSchema) ]).optional(),

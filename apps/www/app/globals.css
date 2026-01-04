@@ -1,268 +1,171 @@
+/* Google Fonts - Inter (optimized with display=swap for better performance) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@config "../tailwind.config.js";
-
-
-
 @layer base {
   :root {
-    /* Base colors - Notion-inspired monochrome */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 6%;
+    /* Ink - Text colors */
+    --ink: 0 0% 8%;
+    --ink-secondary: 0 0% 32%;
+    --ink-tertiary: 0 0% 50%;
+    --ink-muted: 0 0% 65%;
 
-    /* Grayscale - Core palette */
-    --gray-50: 0 0% 98%;
-    --gray-100: 0 0% 96%;
-    --gray-200: 0 0% 93%;
-    --gray-300: 0 0% 88%;
-    --gray-400: 0 0% 62%;
-    --gray-500: 0 0% 45%;
-    --gray-600: 0 0% 32%;
-    --gray-700: 0 0% 25%;
-    --gray-800: 0 0% 15%;
-    --gray-900: 0 0% 9%;
-    --gray-950: 0 0% 6%;
+    /* Canvas - Background colors */
+    --canvas: 0 0% 100%;
+    --canvas-secondary: 40 15% 97%;
+    --canvas-tertiary: 0 0% 90%;
 
-    /* Primary - Used sparingly for critical actions */
-    --primary: 211 100% 50%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 211 100% 42%;
+    /* Accent color - Muted blue */
+    --accent: 220 65% 45%;
 
-    /* Secondary - Subtle gray */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 15%;
-
-    /* UI elements */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
-
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 15%;
-
-    /* Destructive - Error states */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    /* Borders and inputs */
-    --border: 0 0% 93%;
-    --input: 0 0% 88%;
-    --ring: 0 0% 15%;
-
-    /* Radius */
-    --radius: 0.5rem;
-
-    /* Chart colors - Monochrome with single accent */
-    --chart-1: 211 100% 50%;
-    --chart-2: 0 0% 25%;
-    --chart-3: 0 0% 45%;
-    --chart-4: 0 0% 62%;
-    --chart-5: 0 0% 75%;
-
-    /* Sidebar colors */
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 15%;
-    --sidebar-primary: 211 100% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 96%;
-    --sidebar-accent-foreground: 0 0% 15%;
-    --sidebar-border: 0 0% 93%;
-    --sidebar-ring: 0 0% 15%;
-
-    /* Brand colors for glow effects */
-    --brand: 27 96% 61%;
-    --brand-foreground: 31 97% 72%;
+    /* Shadcn compatibility */
+    --background: var(--canvas);
+    --foreground: var(--ink);
+    --primary: var(--ink);
+    --primary-foreground: var(--canvas);
+    --secondary: var(--canvas-secondary);
+    --secondary-foreground: var(--ink);
+    --muted: var(--canvas-secondary);
+    --muted-foreground: var(--ink-tertiary);
+    --card: var(--canvas);
+    --card-foreground: var(--ink);
+    --popover: var(--canvas);
+    --popover-foreground: var(--ink);
+    --border: var(--canvas-tertiary);
+    --input: var(--canvas-tertiary);
+    --ring: var(--ink);
+    --radius: 0.25rem;
   }
 
   .dark {
-    /* Dark mode color palette - Optimized for reading */
-    --background: 0 0% 6%;
-    --foreground: 0 0% 96%;
+    --ink: 0 0% 96%;
+    --ink-secondary: 0 0% 75%;
+    --ink-tertiary: 0 0% 55%;
+    --ink-muted: 0 0% 40%;
 
-    /* Grayscale - Reversed for dark mode */
-    --gray-50: 0 0% 6%;
-    --gray-100: 0 0% 9%;
-    --gray-200: 0 0% 15%;
-    --gray-300: 0 0% 25%;
-    --gray-400: 0 0% 45%;
-    --gray-500: 0 0% 62%;
-    --gray-600: 0 0% 75%;
-    --gray-700: 0 0% 88%;
-    --gray-800: 0 0% 93%;
-    --gray-900: 0 0% 96%;
-    --gray-950: 0 0% 98%;
+    --canvas: 0 0% 6%;
+    --canvas-secondary: 0 0% 9%;
+    --canvas-tertiary: 0 0% 15%;
 
-    /* Primary - Maintains accessibility in dark mode */
-    --primary: 211 100% 60%;
-    --primary-foreground: 0 0% 6%;
-    --primary-hover: 211 100% 52%;
+    --accent: 220 70% 55%;
 
-    /* Secondary */
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 96%;
-
-    /* UI elements */
-    --card: 0 0% 9%;
-    --card-foreground: 0 0% 96%;
-
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 96%;
-
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 62%;
-
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 96%;
-
-    /* Destructive - Optimized for dark backgrounds */
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 0 0% 96%;
-
-    /* Borders and inputs */
-    --border: 0 0% 25%;
-    --input: 0 0% 15%;
-    --ring: 0 0% 85%;
-
-    /* Chart colors - Dark mode optimized */
-    --chart-1: 211 100% 60%;
-    --chart-2: 0 0% 75%;
-    --chart-3: 0 0% 62%;
-    --chart-4: 0 0% 45%;
-    --chart-5: 0 0% 32%;
-
-    /* Sidebar colors */
-    --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 0 0% 96%;
-    --sidebar-primary: 211 100% 60%;
-    --sidebar-primary-foreground: 0 0% 6%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 96%;
-    --sidebar-border: 0 0% 25%;
-    --sidebar-ring: 0 0% 85%;
-
-    /* Brand colors for glow effects */
-    --brand: 31 97% 72%;
-    --brand-foreground: 27 96% 61%;
+    --background: var(--canvas);
+    --foreground: var(--ink);
+    --primary: var(--canvas);
+    --primary-foreground: var(--ink);
+    --secondary: var(--canvas-secondary);
+    --secondary-foreground: var(--ink);
+    --muted: var(--canvas-secondary);
+    --muted-foreground: var(--ink-tertiary);
+    --card: var(--canvas-secondary);
+    --card-foreground: var(--ink);
+    --popover: var(--canvas-secondary);
+    --popover-foreground: var(--ink);
+    --border: var(--canvas-tertiary);
+    --input: var(--canvas-tertiary);
+    --ring: var(--ink);
   }
 
-  /* Ensure proper text rendering */
   * {
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Typography hierarchy */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    letter-spacing: -0.025em;
+  /* Typography Hierarchy */
+  /* Hero / Page Headline: Inter SemiBold (600) */
+  h1 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
   }
 
-  /* Remove all the animations that people don't want to see */
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
+  /* Section Title: Inter Medium (500) */
+  h2, h3 {
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
 
-  /* Logo styling */
-  .logo {
-    filter: brightness(0) saturate(100%) invert(9%) sepia(5%) saturate(2009%)
-      hue-rotate(199deg) brightness(92%) contrast(92%);
+  /* Subsection: Inter Medium (500) */
+  h4, h5, h6 {
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
   }
 
-  .dark .logo {
-    filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(2011%)
-      hue-rotate(203deg) brightness(115%) contrast(91%);
+  /* Body text: Inter Regular (400) - already set in body */
+  p {
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  /* Container - Editorial style with generous padding */
+  .container-editorial {
+    @apply mx-auto px-6 sm:px-8 lg:px-12;
+    max-width: 1200px;
   }
 
-  /* Button glow effect - Disabled by default */
-  .btn-glow {
-    box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
-    transition: box-shadow 0.3s ease;
+  /* Section spacing */
+  .py-section-lg {
+    @apply py-24 md:py-32 lg:py-40;
   }
 
-  .btn-glow:hover {
-    box-shadow: 0 0 30px rgba(0, 123, 255, 0.5);
+  .py-section-md {
+    @apply py-16 md:py-24 lg:py-32;
   }
 
-  /* Focus states that respect system preferences */
-  .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background;
+  .py-section-sm {
+    @apply py-12 md:py-16 lg:py-20;
   }
 
-  /* Scroll bar styling */
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+  /* Margin for section elements */
+  .mt-section {
+    @apply mt-16 md:mt-24 lg:mt-32;
   }
 
-  ::-webkit-scrollbar-track {
-    @apply bg-muted;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply rounded-md bg-border;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-muted-foreground;
-  }
-
-  /* Custom utility for text gradient */
-  .text-gradient {
-    @apply text-transparent bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text;
-  }
-
-  /* Responsive container max-width */
-  .max-w-container {
-    max-width: min(90rem, calc(100vw - 2rem));
-  }
-
-  @media (min-width: 640px) {
-    .max-w-container {
-      max-width: min(90rem, calc(100vw - 4rem));
-    }
-  }
-
-  /* React specific styles */
-  .read-the-docs {
-    color: #888;
+  .mb-section {
+    @apply mb-16 md:mb-24 lg:mb-32;
   }
 }
 
 @layer utilities {
-  .delay-100 {
-    animation-delay: 100ms;
+  /* Prose width constraint */
+  .max-w-prose-narrow {
+    max-width: 45ch;
   }
-  .delay-300 {
-    animation-delay: 300ms;
+
+  .max-w-prose-wide {
+    max-width: 75ch;
   }
-  .delay-700 {
-    animation-delay: 700ms;
-  }
-  .delay-1000 {
-    animation-delay: 1000ms;
+
+  /* Marquee animation */
+  .animate-marquee {
+    animation: marquee linear infinite;
   }
 }
-  
-  
+
+/* Keyframes outside of @layer for better compatibility */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

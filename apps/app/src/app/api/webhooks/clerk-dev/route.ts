@@ -2,7 +2,7 @@ import { Webhook } from "svix";
 import { WebhookEvent } from "@clerk/nextjs/server";
 import { headers } from "next/headers";
 import { prisma } from "@myapp/prisma";
-import { assert, cuid2, isEmptyStringOrNil } from "@myapp/utils";
+import { cuid2, isEmptyStringOrNil } from "@myapp/utils";
 
 export async function POST(req: Request) {
   const secret = process.env.CLERK_DEV_WEBHOOK_SIGNING_SECRET;
@@ -24,18 +24,19 @@ export async function POST(req: Request) {
     const { id: clerkId, username, email_addresses } = event.data;
     const firstEmailAddress = email_addresses[0]?.email_address;
 
-    assert(!isEmptyStringOrNil(username), "username is required");
-    assert(!isEmptyStringOrNil(firstEmailAddress), "email is required");
+    if (isEmptyStringOrNil(firstEmailAddress)) {
+      return new Response("Email is required", { status: 400 });
+    }
 
     if (await prisma.user.findUnique({ where: { clerkId } })) {
       return new Response("User already exists", { status: 200 });
     }
 
-    const user = await prisma.user.create({
+    await prisma.user.create({
       data: {
         id: `usr_${cuid2()}`,
         clerkId,
-        username,
+        username: username ?? null,
         email: firstEmailAddress,
       },
     });

@@ -1,30 +1,28 @@
 "use client";
 
 import { Header } from "@/components/layout";
-import { Hero } from "@/components/Hero";
-import { SolutionSection } from "@/components/sections/solution-section";
-import { TargetUsersSection } from "@/components/sections/target-users-section";
-import { RoadmapSection } from "@/components/sections/roadmap-section";
-import { PricingSection } from "@/components/sections/pricing-section";
-import { FAQSection } from "@/components/sections/faq-section";
-import { FinalCTASection } from "@/components/sections/final-cta-section";
 import { Footer } from "@/components/layout";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { PhilosophySection } from "@/components/sections/PhilosophySection";
+import { FeaturesSection } from "@/components/sections/FeaturesSection";
+import { VisualBreakSection } from "@/components/sections/VisualBreakSection";
+import { PricingSection } from "@/components/sections/PricingSection";
+import { FaqSection } from "@/components/sections/FaqSection";
+import { CtaSection } from "@/components/sections/CtaSection";
 
 const Index = () => {
   return (
-    <>
+    <main className="bg-canvas min-h-screen">
       <Header />
-      <Hero />
-      <SolutionSection />
-      {/* <ProblemSection /> */}
-      {/* <HowItWorksSection /> */}
-      <TargetUsersSection />
-      <RoadmapSection />
+      <HeroSection />
+      <PhilosophySection />
+      <FeaturesSection />
+      <VisualBreakSection />
       <PricingSection />
-      <FAQSection />
-      <FinalCTASection />
+      <FaqSection />
+      <CtaSection />
       <Footer />
-    </>
+    </main>
   );
 };
 
